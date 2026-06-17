@@ -38,13 +38,12 @@
 
     /* ── SIDEBAR ── */
     #sidebar {
-      width: 260px;
-      min-width: 260px;
+      width: 220px;
+      min-width: 220px;
       background: var(--sidebar-bg);
       color: #fff;
       display: flex;
       flex-direction: column;
-      padding: 0;
       position: sticky;
       top: 0;
       height: 100vh;
@@ -53,125 +52,59 @@
 
     .sidebar-header {
       background: var(--red);
-      padding: 20px 18px 16px;
-      text-align: center;
+      padding: 20px 16px;
     }
-    .sidebar-header .shell-icon {
-      font-size: 2.4rem;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .sidebar-header h1 {
-      font-size: 0.8rem;
+    .sidebar-school {
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--gold);
     }
-    .sidebar-header h2 {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fff;
-      margin-top: 2px;
-    }
-    .sidebar-header .season-tag {
-      display: inline-block;
-      margin-top: 6px;
-      background: rgba(255,255,255,0.15);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding: 2px 8px;
-      border-radius: 20px;
-    }
-
-    .profile-card {
-      padding: 18px 16px 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      text-align: center;
-    }
-    .avatar {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: var(--red);
-      margin: 0 auto 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--gold);
-      border: 3px solid var(--gold);
-    }
-    .profile-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-    }
-    .profile-title {
-      font-size: 0.7rem;
-      color: var(--gold);
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
-    .profile-dept {
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.5);
-      margin-top: 2px;
-    }
-
-    .sidebar-section {
-      padding: 14px 16px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .sidebar-section-title {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 10px;
-    }
-
-    .record-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-    .record-box {
-      background: rgba(255,255,255,0.06);
-      border-radius: 8px;
-      padding: 8px 6px;
-      text-align: center;
-    }
-    .record-box .val {
+    .sidebar-team {
       font-size: 1.05rem;
       font-weight: 800;
       color: #fff;
+      margin-top: 2px;
     }
-    .record-box .lbl {
-      font-size: 0.58rem;
-      color: rgba(255,255,255,0.45);
-      letter-spacing: 0.05em;
+    .sidebar-season {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+    .sidebar-role {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .sidebar-section {
+      padding: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .sidebar-section-title {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-top: 1px;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 10px;
     }
 
     .legend-item {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 7px;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.75);
+      margin-bottom: 6px;
+      font-size: 0.73rem;
+      color: rgba(255,255,255,0.65);
     }
     .legend-dot {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -186,7 +119,7 @@
       text-align: left;
       background: transparent;
       border: none;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.6);
       font-size: 0.8rem;
       font-weight: 500;
       padding: 9px 12px;
@@ -197,7 +130,6 @@
     }
     .nav-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
     .nav-btn.active { background: var(--red); color: #fff; font-weight: 700; }
-    .nav-btn .nav-icon { margin-right: 8px; }
 
     /* ── MAIN ── */
     #main {
@@ -297,14 +229,16 @@
     .cal-day.is-neutral-loss { background: var(--loss-light); border-color: #e57373; }
 
     .cal-day-num {
+      display: block;
       font-size: 0.78rem;
       font-weight: 700;
       color: var(--black);
+      margin-bottom: 4px;
     }
     .cal-day.other-month .cal-day-num { color: #aaa; }
 
     .cal-game-pill {
-      margin-top: 5px;
+      margin-top: 4px;
       font-size: 0.62rem;
       font-weight: 700;
       padding: 2px 5px;
@@ -320,7 +254,7 @@
     .cal-opponent {
       font-size: 0.64rem;
       color: #444;
-      margin-top: 3px;
+      margin-top: 5px;
       font-weight: 600;
       line-height: 1.2;
       overflow: hidden;
@@ -328,6 +262,19 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
+    .cal-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+    .cal-conf-label {
+      font-size: 0.58rem;
+      font-weight: 600;
+      color: #3949ab;
+    }
+
     .cal-loc-badge {
       position: absolute;
       top: 6px;
@@ -369,9 +316,9 @@
     .gd-result-badge.win { background: var(--win); color: #fff; }
     .gd-result-badge.loss { background: var(--loss); color: #fff; }
     .gd-result-badge.open { background: var(--open); color: #fff; }
-    .gd-meta { display: flex; flex-wrap: wrap; gap: 16px; }
-    .gd-meta-item { font-size: 0.78rem; color: var(--text-muted); }
-    .gd-meta-item strong { color: var(--black); display: block; font-size: 0.82rem; }
+    .gd-meta { display: flex; flex-wrap: wrap; gap: 20px; }
+    .gd-meta-item { font-size: 0.7rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 2px; }
+    .gd-meta-item strong { color: var(--black); font-size: 0.85rem; }
 
     /* ── SCHEDULE LIST VIEW ── */
     .filter-bar {
@@ -408,7 +355,7 @@
 
     .game-row {
       display: grid;
-      grid-template-columns: 90px 28px 1fr auto auto;
+      grid-template-columns: 90px 28px 1fr auto;
       gap: 12px;
       align-items: center;
       background: #fff;
@@ -430,8 +377,8 @@
       border-radius: 4px; text-align: center;
     }
     .gr-opponent { font-size: 0.88rem; font-weight: 700; }
-    .gr-opponent .venue-info { font-size: 0.7rem; font-weight: 400; color: var(--text-muted); margin-top: 1px; }
-    .gr-time { font-size: 0.75rem; color: var(--text-muted); text-align: right; }
+    .gr-opponent .venue-info { font-size: 0.7rem; font-weight: 400; color: var(--text-muted); margin-top: 2px; }
+    .gr-opponent .time-info { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); margin-top: 1px; }
     .gr-result {
       font-size: 0.78rem; font-weight: 800; text-align: right;
       min-width: 80px;
@@ -442,7 +389,7 @@
 
     .conf-tag {
       font-size: 0.58rem; font-weight: 700; background: #e8eaf6;
-      color: #3949ab; padding: 1px 5px; border-radius: 3px;
+      color: #3949ab; padding: 1px 6px; border-radius: 3px;
       margin-left: 6px; vertical-align: middle;
     }
     .tourn-tag {
@@ -451,81 +398,11 @@
       margin-left: 4px; vertical-align: middle;
     }
 
-    /* ── OPEN DATES VIEW ── */
-    .open-dates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 14px;
-    }
-    .open-date-card {
-      background: #fff;
-      border: 1.5px solid var(--border);
-      border-left: 4px solid var(--open);
-      border-radius: 10px;
-      padding: 16px;
-    }
-    .open-date-card .od-date { font-size: 1rem; font-weight: 800; color: var(--black); }
-    .open-date-card .od-day { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
-    .open-date-card .od-label {
-      display: inline-block; margin-top: 10px;
-      background: var(--open-light); color: var(--open);
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 20px;
-    }
-
-    .summary-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-    .summary-card {
-      background: #fff;
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 18px;
-      box-shadow: var(--shadow);
-    }
-    .summary-card .sc-val {
-      font-size: 1.7rem;
-      font-weight: 900;
-      color: var(--red);
-      line-height: 1;
-    }
-    .summary-card .sc-lbl {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-top: 5px;
-    }
-    .summary-card .sc-sub {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    /* UMD Shell logo shape */
-    .testudo-mark {
-      display: inline-block;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin: 0 auto 6px;
-    }
-
     @media (max-width: 768px) {
       body { flex-direction: column; }
       #sidebar { width: 100%; min-width: unset; height: auto; position: relative; }
       #main { padding: 16px; }
       .game-row { grid-template-columns: 80px 24px 1fr auto; }
-      .gr-time { display: none; }
     }
   </style>
 </head>
@@ -534,75 +411,33 @@
 <!-- ═══════════════════ SIDEBAR ═══════════════════ -->
 <aside id="sidebar">
   <div class="sidebar-header">
-    <div class="testudo-mark">🐢</div>
-    <h1>University of Maryland</h1>
-    <h2>Terrapins Women's Basketball</h2>
-    <span class="season-tag">2025–26 Season</span>
-  </div>
-
-  <div class="profile-card">
-    <div class="avatar">DBO</div>
-    <div class="profile-name">Director of Basketball Operations</div>
-    <div class="profile-title">Operations Staff</div>
-    <div class="profile-dept">UMD Athletics · Women's Basketball</div>
-  </div>
-
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Season Record</div>
-    <div class="record-grid">
-      <div class="record-box">
-        <div class="val" id="sb-overall">21–9</div>
-        <div class="lbl">Overall</div>
-      </div>
-      <div class="record-box">
-        <div class="val" id="sb-conf">11–7</div>
-        <div class="lbl">Big Ten</div>
-      </div>
-      <div class="record-box">
-        <div class="val" id="sb-home">12–4</div>
-        <div class="lbl">Home</div>
-      </div>
-      <div class="record-box">
-        <div class="val" id="sb-away">6–3</div>
-        <div class="lbl">Away</div>
-      </div>
-    </div>
+    <div class="sidebar-school">University of Maryland</div>
+    <div class="sidebar-team">Women's Basketball</div>
+    <div class="sidebar-season">2025–26 Season</div>
+    <div class="sidebar-role">Director of Basketball Operations</div>
   </div>
 
   <div class="sidebar-section">
     <div class="sidebar-section-title">Legend</div>
-    <div class="legend-item"><span class="legend-dot" style="background:var(--win)"></span>Win</div>
-    <div class="legend-item"><span class="legend-dot" style="background:var(--loss)"></span>Loss</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#1565c0"></span>Home game</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#4a148c"></span>Away game</div>
-    <div class="legend-item"><span class="legend-dot" style="background:var(--neutral-color)"></span>Neutral site</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#1565c0"></span>Home</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#4a148c"></span>Away</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--neutral-color)"></span>Neutral</div>
     <div class="legend-item"><span class="legend-dot" style="background:var(--open)"></span>Open date</div>
   </div>
 
   <nav class="sidebar-nav">
-    <div class="sidebar-section-title" style="padding: 0 4px;">Views</div>
-    <button class="nav-btn active" onclick="showView('calendar')" id="nav-calendar">
-      <span class="nav-icon">📅</span> Calendar
-    </button>
-    <button class="nav-btn" onclick="showView('schedule')" id="nav-schedule">
-      <span class="nav-icon">📋</span> Full Schedule
-    </button>
-    <button class="nav-btn" onclick="showView('open')" id="nav-open">
-      <span class="nav-icon">🗓️</span> Open Dates
-    </button>
+    <button class="nav-btn active" onclick="showView('calendar')" id="nav-calendar">Calendar</button>
+    <button class="nav-btn" onclick="showView('schedule')" id="nav-schedule">Full Schedule</button>
   </nav>
 </aside>
 
 <!-- ═══════════════════ MAIN ═══════════════════ -->
 <div id="load-overlay" style="
-  position:fixed;inset:0;background:rgba(255,255,255,0.92);
+  position:fixed;inset:0;background:rgba(255,255,255,0.9);
   display:flex;align-items:center;justify-content:center;
   z-index:999;font-family:inherit;
 ">
-  <div style="text-align:center;">
-    <div style="font-size:1.5rem;margin-bottom:8px;">⏳</div>
-    <p style="font-weight:700;">Loading schedule…</p>
-  </div>
+  <p style="font-size:0.9rem;color:#555;">Loading schedule…</p>
 </div>
 
 <main id="main">
@@ -641,35 +476,6 @@
       <p>Complete 2025–26 season schedule including results and open dates.</p>
     </div>
 
-    <div class="summary-cards">
-      <div class="summary-card">
-        <div class="sc-val" id="stat-overall">—</div>
-        <div class="sc-lbl">Overall Record</div>
-      </div>
-      <div class="summary-card">
-        <div class="sc-val" id="stat-conf">—</div>
-        <div class="sc-lbl">Conference Record</div>
-        <div class="sc-sub">Big Ten</div>
-      </div>
-      <div class="summary-card">
-        <div class="sc-val" id="stat-home">—</div>
-        <div class="sc-lbl">Home Record</div>
-        <div class="sc-sub">XFINITY Center</div>
-      </div>
-      <div class="summary-card">
-        <div class="sc-val" id="stat-away">—</div>
-        <div class="sc-lbl">Away Record</div>
-      </div>
-      <div class="summary-card">
-        <div class="sc-val" id="stat-neutral">—</div>
-        <div class="sc-lbl">Neutral Record</div>
-      </div>
-      <div class="summary-card">
-        <div class="sc-val" id="stat-open">—</div>
-        <div class="sc-lbl">Open Dates</div>
-      </div>
-    </div>
-
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterSchedule('all', this)">All Games</button>
       <button class="filter-btn" onclick="filterSchedule('home', this)">Home</button>
@@ -683,14 +489,6 @@
     <div id="schedule-list"></div>
   </div>
 
-  <!-- ── OPEN DATES VIEW ── -->
-  <div class="view" id="view-open">
-    <div class="page-header">
-      <h2>Open Dates</h2>
-      <p>Dates with no scheduled competition — available for practice, travel, or scheduling flexibility.</p>
-    </div>
-    <div class="open-dates-grid" id="open-dates-grid"></div>
-  </div>
 
 </main>
 
@@ -775,38 +573,6 @@ let gameByDate = {};
 let SEASON_MONTHS = [];
 let currentMonthIdx = 0;
 
-// ═══════════════════════════════════════════════
-// STATS
-// ═══════════════════════════════════════════════
-function rec(games) {
-  const w = games.filter(g => g.result?.startsWith('W')).length;
-  const l = games.filter(g => g.result?.startsWith('L')).length;
-  return w || l ? `${w}–${l}` : '—';
-}
-
-function computeAndRenderStats() {
-  const games = SCHEDULE.filter(g => !g.isOpen);
-  const overall  = rec(games);
-  const conf     = rec(games.filter(g => g.conference));
-  const home     = rec(games.filter(g => g.location === 'Home'));
-  const away     = rec(games.filter(g => g.location === 'Away'));
-  const neutral  = rec(games.filter(g => g.location === 'Neutral'));
-  const openCnt  = SCHEDULE.filter(g => g.isOpen).length;
-
-  // Sidebar boxes
-  document.getElementById('sb-overall').textContent = overall;
-  document.getElementById('sb-conf').textContent    = conf;
-  document.getElementById('sb-home').textContent    = home;
-  document.getElementById('sb-away').textContent    = away;
-
-  // Summary cards
-  document.getElementById('stat-overall').textContent = overall;
-  document.getElementById('stat-conf').textContent    = conf;
-  document.getElementById('stat-home').textContent    = home;
-  document.getElementById('stat-away').textContent    = away;
-  document.getElementById('stat-neutral').textContent = neutral;
-  document.getElementById('stat-open').textContent    = openCnt;
-}
 
 // ═══════════════════════════════════════════════
 // VIEW SWITCHING
@@ -884,13 +650,17 @@ function renderCalendar() {
         if (game.location === 'Neutral') {
           el.classList.add(isWin ? 'is-neutral-win' : 'is-neutral-loss');
         } else {
-          el.classList.add(isWin ? 'is-win' : (isLoss ? 'is-loss' : ''));
+          if (isWin) el.classList.add('is-win');
+          else if (isLoss) el.classList.add('is-loss');
         }
 
         const pillClass = isWin ? 'pill-win' : (isLoss ? 'pill-loss' : 'pill-scheduled');
         const resultText = game.result || game.time || 'TBD';
-        el.innerHTML += `<span class="cal-game-pill ${pillClass}">${resultText}</span>`;
         el.innerHTML += `<div class="cal-opponent">${game.opponent}</div>`;
+        el.innerHTML += `<div class="cal-meta-row">
+          <span class="cal-game-pill ${pillClass}">${resultText}</span>
+          ${game.conference ? `<span class="cal-conf-label">Conference</span>` : ''}
+        </div>`;
         el.innerHTML += `<span class="cal-loc-badge badge-${game.location[0]}">${game.location[0]}</span>`;
         el.addEventListener('click', () => showGameDetail(game, ds, el));
       }
@@ -933,11 +703,11 @@ function showGameDetail(game, ds, clickedEl) {
       ${game.result ? `<div class="gd-result-badge ${resultClass}">${game.result}</div>` : ''}
     </div>
     <div class="gd-meta">
-      <div class="gd-meta-item"><strong>${game.time || '—'}</strong>Tip-off</div>
-      <div class="gd-meta-item"><strong>${locLabel}</strong>Location Type</div>
-      <div class="gd-meta-item"><strong>${game.venue || '—'}</strong>Venue</div>
-      <div class="gd-meta-item"><strong>${game.city || '—'}</strong>City</div>
-      ${game.tournament ? `<div class="gd-meta-item"><strong>${game.tournament}</strong>Tournament</div>` : ''}
+      <div class="gd-meta-item">Tip-off<strong>${game.time || '—'}</strong></div>
+      <div class="gd-meta-item">Location<strong>${locLabel}</strong></div>
+      ${game.location !== 'Home' && game.venue ? `<div class="gd-meta-item">Venue<strong>${game.venue}</strong></div>` : ''}
+      ${game.location !== 'Home' && game.city  ? `<div class="gd-meta-item">City<strong>${game.city}</strong></div>`  : ''}
+      ${game.tournament ? `<div class="gd-meta-item">Tournament<strong>${game.tournament}</strong></div>` : ''}
     </div>
   `;
   det.classList.add('visible');
@@ -995,29 +765,33 @@ function renderSchedule(filter = 'all') {
           <div class="gr-date">${dayLabel}</div>
           <div></div>
           <div class="gr-opponent" style="color:var(--open);font-style:italic;">Open Date</div>
-          <div class="gr-time"></div>
-          <div class="gr-result open">—</div>
+          <div class="gr-result open"></div>
         `;
       } else {
         const isWin = g.result?.startsWith('W');
         const isLoss = g.result?.startsWith('L');
-        row.classList.add(isWin ? 'win-row' : (isLoss ? 'loss-row' : ''));
+        if (isWin) row.classList.add('win-row');
+        else if (isLoss) row.classList.add('loss-row');
 
         const locCode = g.location[0];
         const locColors = { H: '#1565c0', A: '#4a148c', N: '#e65100' };
-        const confBadge  = g.conference ? '<span class="conf-tag">B1G</span>' : '';
+        const confBadge  = g.conference ? '<span class="conf-tag">Conference</span>' : '';
         const tournBadge = g.tournament ? `<span class="tourn-tag">${g.tournament.split('—')[0].trim()}</span>` : '';
-        const venueCity  = g.venue ? `${g.venue} · ${g.city}` : g.city;
+        let venueCity = '';
+        if (g.location !== 'Home') {
+          if (g.venue) venueCity = `${g.venue} · ${g.city}`;
+          else if (g.city) venueCity = g.city;
+        }
 
         row.innerHTML = `
           <div class="gr-date">${dayLabel}</div>
           <div class="gr-loc-badge" style="background:${locColors[locCode]||'#333'};color:#fff;">${locCode}</div>
           <div class="gr-opponent">
             ${g.opponent}${confBadge}${tournBadge}
-            <div class="venue-info">${venueCity}</div>
+            ${g.time ? `<div class="time-info">${g.time}</div>` : ''}
+            ${venueCity ? `<div class="venue-info">${venueCity}</div>` : ''}
           </div>
-          <div class="gr-time">${g.time || ''}</div>
-          <div class="gr-result ${isWin ? 'w' : (isLoss ? 'l' : '')}">${g.result || '—'}</div>
+          <div class="gr-result ${isWin ? 'w' : (isLoss ? 'l' : '')}">${g.result || ''}</div>
         `;
       }
       section.appendChild(row);
@@ -1033,78 +807,25 @@ function filterSchedule(filter, btn) {
   renderSchedule(filter);
 }
 
-// ═══════════════════════════════════════════════
-// OPEN DATES
-// ═══════════════════════════════════════════════
-function renderOpenDates() {
-  const grid = document.getElementById('open-dates-grid');
-  grid.innerHTML = '';
-  SCHEDULE.filter(g => g.isOpen).forEach(g => {
-    const dt = new Date(g.date + 'T12:00:00');
-    const card = document.createElement('div');
-    card.className = 'open-date-card';
-    card.innerHTML = `
-      <div class="od-date">${dt.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-      <div class="od-day">${dt.toLocaleDateString('en-US', { weekday: 'long' })}</div>
-      <div><span class="od-label">Open Date</span></div>
-    `;
-    grid.appendChild(card);
-  });
-}
 
 // ═══════════════════════════════════════════════
-// LOADING UI
+// INIT
 // ═══════════════════════════════════════════════
-function showError(msg) {
-  document.getElementById('load-overlay').innerHTML = `
-    <div style="text-align:center;padding:40px 20px;">
-      <div style="font-size:2rem;margin-bottom:12px;">⚠️</div>
-      <p style="font-weight:700;margin-bottom:8px;">Could not load schedule</p>
-      <p style="font-size:0.82rem;color:#666;margin-bottom:20px;">${msg}</p>
-      <p style="font-size:0.8rem;color:#888;">Select the CSV file manually:</p>
-      <input type="file" accept=".csv" id="csv-file-input"
-        style="margin-top:10px;font-size:0.82rem;cursor:pointer;" />
-    </div>
-  `;
-  document.getElementById('csv-file-input').addEventListener('change', e => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = ev => initFromCSV(ev.target.result);
-    reader.readAsText(file);
-  });
-}
-
 function initFromCSV(csvText) {
   SCHEDULE = parseCSV(csvText);
   gameByDate = {};
   SCHEDULE.forEach(g => { gameByDate[g.date] = g; });
   buildSeasonMonths();
-  computeAndRenderStats();
   renderCalendar();
   renderSchedule('all');
-  renderOpenDates();
   const overlay = document.getElementById('load-overlay');
   if (overlay) overlay.remove();
 }
 
-// ═══════════════════════════════════════════════
-// INIT — fetch CSV relative to this HTML file
-// ═══════════════════════════════════════════════
 (async () => {
-  const overlay = document.getElementById('load-overlay');
-  try {
-    const res = await fetch('umd_womens_basketball_schedule.csv');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const text = await res.text();
-    initFromCSV(text);
-  } catch (err) {
-    showError(
-      'Fetching the CSV failed — this usually means the page was opened directly ' +
-      'as a local file (file://) instead of via a web server. ' +
-      'Serve both files from the same folder with a local server, or pick the file below.'
-    );
-  }
+  const res = await fetch('umd_womens_basketball_schedule.csv');
+  const text = await res.text();
+  initFromCSV(text);
 })();
 </script>
 </body>
